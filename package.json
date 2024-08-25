@@ -1,0 +1,14 @@
+{
+  "name": "k6-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api-test.js",
+  "scripts": {
+    "test": "k6 run api-test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/k6": "^0.53.1"
+  }
+}
