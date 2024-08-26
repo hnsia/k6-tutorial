@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "k6 run --compatibility-mode=experimental_enhanced",
-    "test-with-report": "cross-env K6_WEB_DASHBOARD=true K6_WEB_DASHBOARD_EXPORT=html-report.html k6 run --compatibility-mode=experimental_enhanced"
+    "test-with-report": "cross-env K6_WEB_DASHBOARD=true K6_WEB_DASHBOARD_EXPORT=html-report.html k6 run --compatibility-mode=experimental_enhanced",
+    "build": "cross-env esbuild ./src/**/*.ts --bundle --outbase=src --outdir=dist --external:k6 --format=esm --target=esnext"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/k6": "^0.53.1",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "esbuild": "0.23.1"
   }
 }
